@@ -18,6 +18,7 @@ import shlex
 import sphinx_rtd_theme
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
+from datetime import date
 
 lexers['php'] = PhpLexer(startinline=True, linenos=1)
 
@@ -60,9 +61,10 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
+current_year = date.today().year
 # General information about the project.
 project = u'Money'
-copyright = u'2011-2019, Mathias Verraes, 2019 The Money PHP Team'
+copyright = u'2011-{}, Mathias Verraes, {} The Money PHP Team'.format(current_year)
 author = u'The Money PHP Team'
 
 # The version info for the project you're documenting, acts as replacement for
